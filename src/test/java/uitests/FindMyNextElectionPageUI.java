@@ -42,13 +42,11 @@ public class FindMyNextElectionPageUI extends BaseTests {
 		String stateDropdownLabel = this.findMyNextElectionPage.getStateDropdownLabel();
 		Assert.assertEquals(stateDropdownLabel, "State:");
 	}
-	
 	@Test
 	public void verifyZipFieldLabel() {
 		String zipFieldLabel = this.findMyNextElectionPage.getZipFieldLabel();
 		Assert.assertEquals(zipFieldLabel, "Zip:");
 	}
-	
 	@Test
 	public void verifySearchButtonLabel() {
 		String searchButtonLabel = this.findMyNextElectionPage.getSearchButtonLabel();

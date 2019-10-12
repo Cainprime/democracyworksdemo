@@ -6,6 +6,9 @@ import java.io.IOException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
@@ -15,6 +18,7 @@ import org.testng.annotations.BeforeMethod;
 
 import com.google.common.io.Files;
 
+import config.PropertiesFile;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import pages.FindMyNextElectionPage;
 import utils.EventReporter;
@@ -23,14 +27,32 @@ public class BaseTests {
 
 	private static EventFiringWebDriver driver;
 	protected FindMyNextElectionPage findMyNextElectionPage;
+	public static String browserName = null;
 
 	public BaseTests() {
 
 	}
 	@BeforeClass
 	public void setUp() {
-		WebDriverManager.chromedriver().setup();
-		driver = new EventFiringWebDriver(new ChromeDriver());
+		
+		PropertiesFile.getProperties();
+		
+		if(browserName.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			driver = new EventFiringWebDriver(new ChromeDriver());
+		}
+		else if(browserName.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			driver = new EventFiringWebDriver(new FirefoxDriver());
+		}
+//		else if(browserName.equalsIgnoreCase("edge")) {
+//			WebDriverManager.edgedriver().setup();
+//			driver = new EventFiringWebDriver(new EdgeDriver());
+//		}
+		else if(browserName.equalsIgnoreCase("ie")) {
+			WebDriverManager.iedriver().setup();
+			driver = new EventFiringWebDriver(new InternetExplorerDriver());
+		}
 		driver.register(new EventReporter());
 		this.gofindMyNextElectionPage();
 	}

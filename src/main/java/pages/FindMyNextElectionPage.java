@@ -55,7 +55,7 @@ public class FindMyNextElectionPage {
 	}
 	
 	public String getSearchButtonLabel() {
-		WebElement searchButton = driver.findElement(By.className(".button"));
+		WebElement searchButton = driver.findElement(By.xpath("//div[4]/button"));
 		String searchButtonLabel = searchButton.getText();
 		return searchButtonLabel;
 	}
