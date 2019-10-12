@@ -6,10 +6,17 @@
       <class name="uitests.FindMyNextElectionPageUI">
         <methods>
           <include name="tearDown"/>
+          <include name="verifyStreet2FieldLabel"/>
+          <include name="verifyZipFieldLabel"/>
           <include name="recordFailure"/>
+          <include name="verifyUserMessage"/>
           <include name="setUp"/>
           <include name="verifySearchButtonLabel"/>
           <include name="gofindMyNextElectionPage"/>
+          <include name="verifyCityFieldLabel"/>
+          <include name="verifyStateDropdownLabel"/>
+          <include name="verifyStreetFieldLabel"/>
+          <include name="verifyHeaderText"/>
         </methods>
       </class> <!-- uitests.FindMyNextElectionPageUI -->
     </classes>
