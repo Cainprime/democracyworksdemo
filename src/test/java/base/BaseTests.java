@@ -39,6 +39,8 @@ public class BaseTests {
 		driver.get("http://home.novonon.com:9191");
 		this.findMyNextElectionPage = new FindMyNextElectionPage(driver);
 	}
+	
+	
 	@AfterMethod
 	public void recordFailure(ITestResult result) {
 		if(2 == result.getStatus()) {
