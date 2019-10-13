@@ -1,9 +1,13 @@
 package uitests;
 
+import java.util.List;
+
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.BaseTests;
+import utils.DataProviderUtils;
 
 public class FindMyNextElectionPageUI extends BaseTests {
 	
@@ -52,5 +56,20 @@ public class FindMyNextElectionPageUI extends BaseTests {
 		String searchButtonLabel = this.findMyNextElectionPage.getSearchButtonLabel();
 		Assert.assertEquals(searchButtonLabel, "Search");
 	}
+	
+	@Test
+	public void verifyStateDropdownIsClickable() throws InterruptedException {
+		this.findMyNextElectionPage.clickStateDropdown();
+//		Thread.sleep(3000);
+	}
+	
+//	@Test(dataProvider = "statedropdownlist")
+//	public void test1() {
+//		List<WebElement> testlist = this.findMyNextElectionPage.getStateDropdownOptions();
+////		System.out.println("Number of options: " + testlist.size());
+////		System.out.println("option 3 is: " + testlist.get(3).getText());
+//		
+//	}
+
 	
 }

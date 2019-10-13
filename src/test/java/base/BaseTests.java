@@ -2,7 +2,9 @@ package base;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,6 +17,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
 import com.google.common.io.Files;
 
@@ -28,6 +31,8 @@ public class BaseTests {
 	private static EventFiringWebDriver driver;
 	protected FindMyNextElectionPage findMyNextElectionPage;
 	public static String browserName = null;
+	public static String baseUrl = null;
+	FindMyNextElectionPage streetField;
 
 	public BaseTests() {
 
@@ -58,9 +63,19 @@ public class BaseTests {
 	}
 	@BeforeMethod
 	public void gofindMyNextElectionPage() {
+		PropertiesFile.getProperties();
+		
 		driver.get("http://home.novonon.com:9191");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		this.findMyNextElectionPage = new FindMyNextElectionPage(driver);
 	}
+	
+//	@Test
+//	public void test1() throws Exception {
+//		driver.findElement(By.id("street-field")).sendKeys("testing 1 2 3");
+//		Thread.sleep(2000);
+//	}
 	
 	
 	@AfterMethod

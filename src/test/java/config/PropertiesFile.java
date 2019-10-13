@@ -14,7 +14,6 @@ public class PropertiesFile {
 	static String projectPath = System.getProperty("user.dir");
 
 	public static void main(String[] args) {
-
 	}
 
 	public static void getProperties() {
@@ -22,8 +21,11 @@ public class PropertiesFile {
 			InputStream input = new FileInputStream(projectPath + "/src/test/java/config/config.properties");	
 			prop.load(input);
 			String browser = prop.getProperty("browser");
-			System.out.println(browser);
+			String baseUrl = prop.getProperty("baseUrl");
+			System.out.println("Browser is set to: " + browser);
 			BaseTests.browserName = browser;
+			System.out.println("Base URL is: " +baseUrl);
+			BaseTests.baseUrl = baseUrl;
 		} 
 		catch(Exception exp) {
 			System.out.println(exp.getMessage());
