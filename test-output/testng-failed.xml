@@ -5,11 +5,11 @@
     <classes>
       <class name="functionaltests.FindMyNextElectionPageEnterAddress">
         <methods>
-          <include name="fillInStreetFieldWithValidData" invocation-numbers="0 1"/>
           <include name="tearDown"/>
           <include name="recordFailure"/>
           <include name="setUp"/>
           <include name="gofindMyNextElectionPage"/>
+          <include name="fillInOnlyStateField" invocation-numbers="1"/>
         </methods>
       </class> <!-- functionaltests.FindMyNextElectionPageEnterAddress -->
     </classes>
