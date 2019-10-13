@@ -95,8 +95,12 @@ public class FindMyNextElectionPage {
 		String searchButtonLabel = searchButton.getText();
 		return searchButtonLabel;
 	}
-	
 	public void clickSearchButton() {
 		driver.findElement(By.xpath("//div[4]/button")).click();
+	}
+	public String getSearchPageMessage() {
+		WebElement searchPageHeader = driver.findElement(By.xpath("//section/h1"));
+		String searchPageHeaderLabel = searchPageHeader.getText();
+		return searchPageHeaderLabel;
 	}
 }
