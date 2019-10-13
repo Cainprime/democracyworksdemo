@@ -9,17 +9,71 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">8</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">8,867</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">12,556</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="8">uitests.FindMyNextElectionPageUI</td><td><a href="#m0">verifyCityFieldLabel</a></td><td rowspan="1">1570916463510</td><td rowspan="1">222</td></tr><tr class="passedeven"><td><a href="#m1">verifyHeaderText</a></td><td rowspan="1">1570916463980</td><td rowspan="1">163</td></tr><tr class="passedeven"><td><a href="#m2">verifySearchButtonLabel</a></td><td rowspan="1">1570916464395</td><td rowspan="1">164</td></tr><tr class="passedeven"><td><a href="#m3">verifyStateDropdownLabel</a></td><td rowspan="1">1570916464854</td><td rowspan="1">153</td></tr><tr class="passedeven"><td><a href="#m4">verifyStreet2FieldLabel</a></td><td rowspan="1">1570916465303</td><td rowspan="1">162</td></tr><tr class="passedeven"><td><a href="#m5">verifyStreetFieldLabel</a></td><td rowspan="1">1570916465755</td><td rowspan="1">162</td></tr><tr class="passedeven"><td><a href="#m6">verifyUserMessage</a></td><td rowspan="1">1570916466156</td><td rowspan="1">162</td></tr><tr class="passedeven"><td><a href="#m7">verifyZipFieldLabel</a></td><td rowspan="1">1570916466624</td><td rowspan="1">152</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">functionaltests.FindMyNextElectionPageEnterAddress</td><td><a href="#m0">fillInStreetFieldWithValidData</a></td><td rowspan="2">1570931780130</td><td rowspan="2">3</td></tr><tr class="failedeven"><td><a href="#m1">fillInStreetFieldWithValidData</a></td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">uitests.FindMyNextElectionPageUI#verifyCityFieldLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">uitests.FindMyNextElectionPageUI#verifyHeaderText</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">uitests.FindMyNextElectionPageUI#verifySearchButtonLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">uitests.FindMyNextElectionPageUI#verifyStateDropdownLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">uitests.FindMyNextElectionPageUI#verifyStreet2FieldLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">uitests.FindMyNextElectionPageUI#verifyStreetFieldLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">uitests.FindMyNextElectionPageUI#verifyUserMessage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">uitests.FindMyNextElectionPageUI#verifyZipFieldLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">functionaltests.FindMyNextElectionPageEnterAddress#fillInStreetFieldWithValidData</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>323 18th Street</td><td>Floor 3</td><td>Brooklyn</td><td>NY</td><td>11215-6112</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">java.lang.NullPointerException
+	at functionaltests.FindMyNextElectionPageEnterAddress.fillInStreetFieldWithValidData(FindMyNextElectionPageEnterAddress.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">functionaltests.FindMyNextElectionPageEnterAddress#fillInStreetFieldWithValidData</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>asdfadsf</td><td>asdfadsf</td><td>asdfadf</td><td>asdfadsf</td><td>dfafasdf</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">java.lang.NullPointerException
+	at functionaltests.FindMyNextElectionPageEnterAddress.fillInStreetFieldWithValidData(FindMyNextElectionPageEnterAddress.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.util.ArrayList.forEach(Unknown Source)
+	at org.testng.TestRunner.privateRun(TestRunner.java:770)
+	at org.testng.TestRunner.run(TestRunner.java:591)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+	at org.testng.TestNG.runSuites(TestNG.java:1032)
+	at org.testng.TestNG.run(TestNG.java:1000)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

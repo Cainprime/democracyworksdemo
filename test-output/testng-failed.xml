@@ -3,22 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="uitests.FindMyNextElectionPageUI">
+      <class name="functionaltests.FindMyNextElectionPageEnterAddress">
         <methods>
+          <include name="fillInStreetFieldWithValidData" invocation-numbers="0 1"/>
           <include name="tearDown"/>
-          <include name="verifyStreet2FieldLabel"/>
-          <include name="verifyZipFieldLabel"/>
           <include name="recordFailure"/>
-          <include name="verifyUserMessage"/>
           <include name="setUp"/>
-          <include name="verifySearchButtonLabel"/>
           <include name="gofindMyNextElectionPage"/>
-          <include name="verifyCityFieldLabel"/>
-          <include name="verifyStateDropdownLabel"/>
-          <include name="verifyStreetFieldLabel"/>
-          <include name="verifyHeaderText"/>
         </methods>
-      </class> <!-- uitests.FindMyNextElectionPageUI -->
+      </class> <!-- functionaltests.FindMyNextElectionPageEnterAddress -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
