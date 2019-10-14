@@ -20,17 +20,17 @@ public class FindMyNextElectionPageEnterAddress extends BaseTests{
 	public FindMyNextElectionPageEnterAddress() {
 
 	}
-//	@Test(dataProvider = "statedropdownlist2")
-//	public void fillInAddressWithData(String address1, String address2, String city, String state, String zip) {
-//		System.out.println(address1 + " | " + address2 + " | " + city + " | " + state + " | " + zip);
-//		this.findMyNextElectionPage.enterTextToStreetField(address1);
-//		this.findMyNextElectionPage.enterTextToStreet2Field(address2);
-//		this.findMyNextElectionPage.enterTextToCityField(city);
-//		this.findMyNextElectionPage.enterTextToZipField(state);
-//		this.findMyNextElectionPage.selectStateDropdownOption(zip);
-//		this.findMyNextElectionPage.clickSearchButton();
-//		Thread.sleep(1000);
-//	}
+	@Test(dataProvider = "statedropdownlist2")
+	public void fillInAddressWithData(String address1, String address2, String city, String state, String zip) throws Exception {
+		System.out.println(address1 + " | " + address2 + " | " + city + " | " + state + " | " + zip);
+		this.findMyNextElectionPage.enterTextToStreetField(address1);
+		this.findMyNextElectionPage.enterTextToStreet2Field(address2);
+		this.findMyNextElectionPage.enterTextToCityField(city);
+		this.findMyNextElectionPage.enterTextToZipField(state);
+		this.findMyNextElectionPage.selectStateDropdownOption(zip);
+		this.findMyNextElectionPage.clickSearchButton();
+		Thread.sleep(1000);
+	}
 	@Test(dataProvider = "statedropdownlist2")
 	public void fillInOnlyStreetField(String address1, String address2, String city, String state, String zip) throws Exception{
 		this.findMyNextElectionPage.enterTextToStreetField(address1);
@@ -78,7 +78,7 @@ public class FindMyNextElectionPageEnterAddress extends BaseTests{
 	@DataProvider(name = "statedropdownlist2")
 	public Object[][] getData2() {
 		String projectPath = System.getProperty("user.dir");
-		Object data[][] = verifyStateDropdownOptions(projectPath + "/dataproviders/democracyworksstatedropdown.xlsx", "Address test data");
+		Object data[][] = verifyStateDropdownOptions(projectPath + "/dataproviders/democracyworksstatedropdown.xlsx", "AddressValiddata");
 		return data;
 	}
 	public Object[][] verifyStateDropdownOptions(String dataPath, String sheetName) {
