@@ -15,10 +15,17 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.google.common.io.Files;
 
 import config.PropertiesFile;
@@ -37,11 +44,12 @@ public class BaseTests {
 	public BaseTests() {
 
 	}
+
 	@BeforeClass
 	public void setUp() {
-		
+
 		PropertiesFile.getProperties();
-		
+
 		if(browserName.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new EventFiringWebDriver(new ChromeDriver());
@@ -50,34 +58,38 @@ public class BaseTests {
 			WebDriverManager.firefoxdriver().setup();
 			driver = new EventFiringWebDriver(new FirefoxDriver());
 		}
-//		else if(browserName.equalsIgnoreCase("edge")) {
-//			WebDriverManager.edgedriver().setup();
-//			driver = new EventFiringWebDriver(new EdgeDriver());
-//		}
+		//		else if(browserName.equalsIgnoreCase("edge")) {
+		//			WebDriverManager.edgedriver().setup();
+		//			driver = new EventFiringWebDriver(new EdgeDriver());
+		//		}
 		else if(browserName.equalsIgnoreCase("ie")) {
 			WebDriverManager.iedriver().setup();
 			driver = new EventFiringWebDriver(new InternetExplorerDriver());
 		}
-		driver.register(new EventReporter());
 		this.gofindMyNextElectionPage();
 	}
 	@BeforeMethod
 	public void gofindMyNextElectionPage() {
 		PropertiesFile.getProperties();
-		
+
 		driver.get("http://home.novonon.com:9191");
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		this.findMyNextElectionPage = new FindMyNextElectionPage(driver);
 	}
-	
-//	@Test
-//	public void test1() throws Exception {
-//		driver.findElement(By.id("street-field")).sendKeys("testing 1 2 3");
-//		Thread.sleep(2000);
-//	}
-	
-	
+
+//		@Test
+//		public void test1() throws Exception {
+//			ExtentTest test = extent.createTest("MyFirstTest", "Sample description");
+//	        test.log(Status.INFO, "This step shows usage of log(status, details)");
+//	        test.info("This step shows usage of info(details)");
+//	        test.fail("details", MediaEntityBuilder.createScreenCaptureFromPath("screenshot.png").build());
+//	        test.addScreenCaptureFromPath("screenshot.png");
+//			driver.findElement(By.id("street-field")).sendKeys("testing 1 2 3");
+//			Thread.sleep(2000);
+//		}
+
+
 	@AfterMethod
 	public void recordFailure(ITestResult result) {
 		if(2 == result.getStatus()) {
@@ -91,8 +103,9 @@ public class BaseTests {
 			}
 		}
 	}
-	@AfterClass
-	public void tearDown() {driver.quit();}
-
+	@AfterSuite
+	public void tearDown() {
+		driver.quit();
+	}
 
 }

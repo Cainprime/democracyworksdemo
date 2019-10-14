@@ -9,55 +9,18 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">51,799</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">9</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">11,767</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">functionaltests.FindMyNextElectionPageEnterAddress</td><td><a href="#m0">fillInOnlyStateField</a></td><td rowspan="1">1571009932916</td><td rowspan="1">5027</td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="9">functionaltests.FindMyNextElectionPageEnterAddress</td><td><a href="#m1">fillInOnlyCityField</a></td><td rowspan="2">1571009925062</td><td rowspan="2">3717</td></tr><tr class="passedeven"><td><a href="#m2">fillInOnlyCityField</a></td></tr><tr class="passedeven"><td><a href="#m3">fillInOnlyStateField</a></td><td rowspan="1">1571009929000</td><td rowspan="1">3711</td></tr><tr class="passedeven"><td><a href="#m4">fillInOnlyStreet2Field</a></td><td rowspan="2">1571009938354</td><td rowspan="2">3688</td></tr><tr class="passedeven"><td><a href="#m5">fillInOnlyStreet2Field</a></td></tr><tr class="passedeven"><td><a href="#m6">fillInOnlyStreetField</a></td><td rowspan="2">1571009945939</td><td rowspan="2">3752</td></tr><tr class="passedeven"><td><a href="#m7">fillInOnlyStreetField</a></td></tr><tr class="passedeven"><td><a href="#m8">fillInOnlyZipField</a></td><td rowspan="2">1571009953631</td><td rowspan="2">3690</td></tr><tr class="passedeven"><td><a href="#m9">fillInOnlyZipField</a></td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="9">uitests.FindMyNextElectionPageUI</td><td><a href="#m0">verifyCityFieldLabel</a></td><td rowspan="1">1571068268134</td><td rowspan="1">38</td></tr><tr class="passedeven"><td><a href="#m1">verifyHeaderText</a></td><td rowspan="1">1571068268278</td><td rowspan="1">27</td></tr><tr class="passedeven"><td><a href="#m2">verifySearchButtonLabel</a></td><td rowspan="1">1571068268397</td><td rowspan="1">35</td></tr><tr class="passedeven"><td><a href="#m3">verifyStateDropdownIsClickable</a></td><td rowspan="1">1571068268535</td><td rowspan="1">59</td></tr><tr class="passedeven"><td><a href="#m4">verifyStateDropdownLabel</a></td><td rowspan="1">1571068268695</td><td rowspan="1">22</td></tr><tr class="passedeven"><td><a href="#m5">verifyStreet2FieldLabel</a></td><td rowspan="1">1571068268809</td><td rowspan="1">23</td></tr><tr class="passedeven"><td><a href="#m6">verifyStreetFieldLabel</a></td><td rowspan="1">1571068268926</td><td rowspan="1">20</td></tr><tr class="passedeven"><td><a href="#m7">verifyUserMessage</a></td><td rowspan="1">1571068269051</td><td rowspan="1">22</td></tr><tr class="passedeven"><td><a href="#m8">verifyZipFieldLabel</a></td><td rowspan="1">1571068269176</td><td rowspan="1">22</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">functionaltests.FindMyNextElectionPageEnterAddress#fillInOnlyStateField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>asdfadsf</td><td>asdfadsf</td><td>asdfadf</td><td>asdfadsf</td><td>dfafasdf</td></tr><tr><th colspan="5">Exception</th></tr><tr><td colspan="5"><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Cannot locate element with text: asdfadsf
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;MICHAELVU-PC&apos;, ip: &apos;192.168.1.12&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_212&apos;
-Driver info: driver.version: unknown
-	at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
-	at pages.FindMyNextElectionPage.selectStateDropdownOption(FindMyNextElectionPage.java:80)
-	at functionaltests.FindMyNextElectionPageEnterAddress.fillInOnlyStateField(FindMyNextElectionPageEnterAddress.java:57)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.util.ArrayList.forEach(Unknown Source)
-	at org.testng.TestRunner.privateRun(TestRunner.java:770)
-	at org.testng.TestRunner.run(TestRunner.java:591)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:304)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
-	at org.testng.TestNG.runSuites(TestNG.java:1032)
-	at org.testng.TestNG.run(TestNG.java:1000)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">functionaltests.FindMyNextElectionPageEnterAddress#fillInOnlyCityField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>asdfadsf</td><td>asdfadsf</td><td>asdfadf</td><td>asdfadsf</td><td>dfafasdf</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">functionaltests.FindMyNextElectionPageEnterAddress#fillInOnlyCityField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>323 18th Street</td><td>Floor 3</td><td>Brooklyn</td><td>NY</td><td>11215-6112</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">functionaltests.FindMyNextElectionPageEnterAddress#fillInOnlyStateField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>323 18th Street</td><td>Floor 3</td><td>Brooklyn</td><td>NY</td><td>11215-6112</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">functionaltests.FindMyNextElectionPageEnterAddress#fillInOnlyStreet2Field</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>323 18th Street</td><td>Floor 3</td><td>Brooklyn</td><td>NY</td><td>11215-6112</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">functionaltests.FindMyNextElectionPageEnterAddress#fillInOnlyStreet2Field</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>asdfadsf</td><td>asdfadsf</td><td>asdfadf</td><td>asdfadsf</td><td>dfafasdf</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">functionaltests.FindMyNextElectionPageEnterAddress#fillInOnlyStreetField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>323 18th Street</td><td>Floor 3</td><td>Brooklyn</td><td>NY</td><td>11215-6112</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">functionaltests.FindMyNextElectionPageEnterAddress#fillInOnlyStreetField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>asdfadsf</td><td>asdfadsf</td><td>asdfadf</td><td>asdfadsf</td><td>dfafasdf</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">functionaltests.FindMyNextElectionPageEnterAddress#fillInOnlyZipField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>323 18th Street</td><td>Floor 3</td><td>Brooklyn</td><td>NY</td><td>11215-6112</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">functionaltests.FindMyNextElectionPageEnterAddress#fillInOnlyZipField</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th><th>Parameter #5</th></tr><tr class="param stripe"><td>asdfadsf</td><td>asdfadsf</td><td>asdfadf</td><td>asdfadsf</td><td>dfafasdf</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">uitests.FindMyNextElectionPageUI#verifyCityFieldLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">uitests.FindMyNextElectionPageUI#verifyHeaderText</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">uitests.FindMyNextElectionPageUI#verifySearchButtonLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">uitests.FindMyNextElectionPageUI#verifyStateDropdownIsClickable</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">uitests.FindMyNextElectionPageUI#verifyStateDropdownLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">uitests.FindMyNextElectionPageUI#verifyStreet2FieldLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">uitests.FindMyNextElectionPageUI#verifyStreetFieldLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">uitests.FindMyNextElectionPageUI#verifyUserMessage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">uitests.FindMyNextElectionPageUI#verifyZipFieldLabel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
