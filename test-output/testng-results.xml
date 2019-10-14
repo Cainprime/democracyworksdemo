@@ -1,192 +1,345 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+<testng-results skipped="0" failed="1" ignored="0" total="6" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="11767" started-at="2019-10-14T11:50:57 EDT" finished-at="2019-10-14T11:51:09 EDT">
+  <suite name="Default suite" duration-ms="36285" started-at="2019-10-14T11:59:08 EDT" finished-at="2019-10-14T11:59:44 EDT">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="11767" started-at="2019-10-14T11:50:57 EDT" finished-at="2019-10-14T11:51:09 EDT">
-      <class name="uitests.FindMyNextElectionPageUI">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="setUp" is-config="true" duration-ms="10461" started-at="2019-10-14T11:50:57 EDT" finished-at="2019-10-14T11:51:07 EDT">
+    <test name="Default test" duration-ms="36285" started-at="2019-10-14T11:59:08 EDT" finished-at="2019-10-14T11:59:44 EDT">
+      <class name="functionaltests.FindMyNextElectionPageEnterAddress">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="setUp" is-config="true" duration-ms="10667" started-at="2019-10-14T11:59:08 EDT" finished-at="2019-10-14T11:59:19 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="218" started-at="2019-10-14T11:51:07 EDT" finished-at="2019-10-14T11:51:08 EDT">
+        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="172" started-at="2019-10-14T11:59:19 EDT" finished-at="2019-10-14T11:59:19 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- gofindMyNextElectionPage -->
-        <test-method status="PASS" signature="verifyCityFieldLabel()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="verifyCityFieldLabel" duration-ms="38" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyCityFieldLabel -->
-        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="1" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
+        <test-method status="FAIL" signature="fillInAddressWithData(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="fillInAddressWithData" duration-ms="5315" started-at="2019-10-14T11:59:19 EDT" data-provider="statedropdownlist2" finished-at="2019-10-14T11:59:25 EDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyCityFieldLabel status=SUCCESS method=FindMyNextElectionPageUI.verifyCityFieldLabel()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c] output={null}]]]>
+                <![CDATA[323 18th Street]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Floor 3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Brooklyn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[NY]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[11215-6112]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Cannot locate element with text: 11215-6112
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MICHAELVU-PC', ip: '192.168.1.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_212'
+Driver info: driver.version: unknown]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate element with text: 11215-6112
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'MICHAELVU-PC', ip: '192.168.1.12', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_212'
+Driver info: driver.version: unknown
+at org.openqa.selenium.support.ui.Select.selectByVisibleText(Select.java:147)
+at pages.FindMyNextElectionPage.selectStateDropdownOption(FindMyNextElectionPage.java:80)
+at functionaltests.FindMyNextElectionPageEnterAddress.fillInAddressWithData(FindMyNextElectionPageEnterAddress.java:30)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:584)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:172)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:804)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:145)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(Unknown Source)
+at org.testng.TestRunner.privateRun(TestRunner.java:770)
+at org.testng.TestRunner.run(TestRunner.java:591)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:402)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:396)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:355)
+at org.testng.SuiteRunner.run(SuiteRunner.java:304)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1180)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1102)
+at org.testng.TestNG.runSuites(TestNG.java:1032)
+at org.testng.TestNG.run(TestNG.java:1000)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillInAddressWithData -->
+        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="292" started-at="2019-10-14T11:59:25 EDT" finished-at="2019-10-14T11:59:25 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=fillInAddressWithData status=FAILURE method=FindMyNextElectionPageEnterAddress.fillInAddressWithData(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- recordFailure -->
-        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="104" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
+        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="97" started-at="2019-10-14T11:59:25 EDT" finished-at="2019-10-14T11:59:25 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- gofindMyNextElectionPage -->
-        <test-method status="PASS" signature="verifyHeaderText()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="verifyHeaderText" duration-ms="27" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyHeaderText -->
-        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="91" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- gofindMyNextElectionPage -->
-        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="0" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
+        <test-method status="PASS" signature="fillInOnlyCityField(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="fillInOnlyCityField" duration-ms="3699" started-at="2019-10-14T11:59:25 EDT" data-provider="statedropdownlist2" finished-at="2019-10-14T11:59:29 EDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyHeaderText status=SUCCESS method=FindMyNextElectionPageUI.verifyHeaderText()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c] output={null}]]]>
+                <![CDATA[323 18th Street]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Floor 3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Brooklyn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[NY]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[11215-6112]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillInOnlyCityField -->
+        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="0" started-at="2019-10-14T11:59:29 EDT" finished-at="2019-10-14T11:59:29 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=fillInOnlyCityField status=SUCCESS method=FindMyNextElectionPageEnterAddress.fillInOnlyCityField(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- recordFailure -->
-        <test-method status="PASS" signature="verifySearchButtonLabel()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="verifySearchButtonLabel" duration-ms="35" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifySearchButtonLabel -->
-        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="102" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
+        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="101" started-at="2019-10-14T11:59:29 EDT" finished-at="2019-10-14T11:59:29 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- gofindMyNextElectionPage -->
-        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="0" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
+        <test-method status="PASS" signature="fillInOnlyStateField(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="fillInOnlyStateField" duration-ms="4057" started-at="2019-10-14T11:59:29 EDT" data-provider="statedropdownlist2" finished-at="2019-10-14T11:59:33 EDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifySearchButtonLabel status=SUCCESS method=FindMyNextElectionPageUI.verifySearchButtonLabel()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c] output={null}]]]>
+                <![CDATA[323 18th Street]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Floor 3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Brooklyn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[NY]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[11215-6112]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillInOnlyStateField -->
+        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="1" started-at="2019-10-14T11:59:33 EDT" finished-at="2019-10-14T11:59:33 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=fillInOnlyStateField status=SUCCESS method=FindMyNextElectionPageEnterAddress.fillInOnlyStateField(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- recordFailure -->
-        <test-method status="PASS" signature="verifyStateDropdownIsClickable()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="verifyStateDropdownIsClickable" duration-ms="59" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyStateDropdownIsClickable -->
-        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="0" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyStateDropdownIsClickable status=SUCCESS method=FindMyNextElectionPageUI.verifyStateDropdownIsClickable()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- recordFailure -->
-        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="99" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
+        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="100" started-at="2019-10-14T11:59:33 EDT" finished-at="2019-10-14T11:59:33 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- gofindMyNextElectionPage -->
-        <test-method status="PASS" signature="verifyStateDropdownLabel()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="verifyStateDropdownLabel" duration-ms="22" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
+        <test-method status="PASS" signature="fillInOnlyStreet2Field(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="fillInOnlyStreet2Field" duration-ms="3675" started-at="2019-10-14T11:59:33 EDT" data-provider="statedropdownlist2" finished-at="2019-10-14T11:59:37 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[323 18th Street]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Floor 3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Brooklyn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[NY]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[11215-6112]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyStateDropdownLabel -->
-        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="91" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
+        </test-method> <!-- fillInOnlyStreet2Field -->
+        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="0" started-at="2019-10-14T11:59:37 EDT" finished-at="2019-10-14T11:59:37 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=fillInOnlyStreet2Field status=SUCCESS method=FindMyNextElectionPageEnterAddress.fillInOnlyStreet2Field(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="226" started-at="2019-10-14T11:59:37 EDT" finished-at="2019-10-14T11:59:37 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- gofindMyNextElectionPage -->
-        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="0" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
+        <test-method status="PASS" signature="fillInOnlyStreetField(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="fillInOnlyStreetField" duration-ms="3679" started-at="2019-10-14T11:59:37 EDT" data-provider="statedropdownlist2" finished-at="2019-10-14T11:59:41 EDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyStateDropdownLabel status=SUCCESS method=FindMyNextElectionPageUI.verifyStateDropdownLabel()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c] output={null}]]]>
+                <![CDATA[323 18th Street]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Floor 3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Brooklyn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[NY]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[11215-6112]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillInOnlyStreetField -->
+        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="1" started-at="2019-10-14T11:59:41 EDT" finished-at="2019-10-14T11:59:41 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=fillInOnlyStreetField status=SUCCESS method=FindMyNextElectionPageEnterAddress.fillInOnlyStreetField(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- recordFailure -->
-        <test-method status="PASS" signature="verifyStreet2FieldLabel()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="verifyStreet2FieldLabel" duration-ms="23" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyStreet2FieldLabel -->
-        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="1" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyStreet2FieldLabel status=SUCCESS method=FindMyNextElectionPageUI.verifyStreet2FieldLabel()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- recordFailure -->
-        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="93" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
+        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="132" started-at="2019-10-14T11:59:41 EDT" finished-at="2019-10-14T11:59:41 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- gofindMyNextElectionPage -->
-        <test-method status="PASS" signature="verifyStreetFieldLabel()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="verifyStreetFieldLabel" duration-ms="20" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyStreetFieldLabel -->
-        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="0" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:08 EDT">
+        <test-method status="PASS" signature="fillInOnlyZipField(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="fillInOnlyZipField" duration-ms="3693" started-at="2019-10-14T11:59:41 EDT" data-provider="statedropdownlist2" finished-at="2019-10-14T11:59:44 EDT">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyStreetFieldLabel status=SUCCESS method=FindMyNextElectionPageUI.verifyStreetFieldLabel()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c] output={null}]]]>
+                <![CDATA[323 18th Street]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Floor 3]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Brooklyn]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[NY]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[11215-6112]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fillInOnlyZipField -->
+        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="0" started-at="2019-10-14T11:59:44 EDT" finished-at="2019-10-14T11:59:44 EDT">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=fillInOnlyZipField status=SUCCESS method=FindMyNextElectionPageEnterAddress.fillInOnlyZipField(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- recordFailure -->
-        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="104" started-at="2019-10-14T11:51:08 EDT" finished-at="2019-10-14T11:51:09 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- gofindMyNextElectionPage -->
-        <test-method status="PASS" signature="verifyUserMessage()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="verifyUserMessage" duration-ms="22" started-at="2019-10-14T11:51:09 EDT" finished-at="2019-10-14T11:51:09 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyUserMessage -->
-        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="0" started-at="2019-10-14T11:51:09 EDT" finished-at="2019-10-14T11:51:09 EDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyUserMessage status=SUCCESS method=FindMyNextElectionPageUI.verifyUserMessage()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- recordFailure -->
-        <test-method status="PASS" signature="gofindMyNextElectionPage()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="gofindMyNextElectionPage" is-config="true" duration-ms="102" started-at="2019-10-14T11:51:09 EDT" finished-at="2019-10-14T11:51:09 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- gofindMyNextElectionPage -->
-        <test-method status="PASS" signature="verifyZipFieldLabel()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="verifyZipFieldLabel" duration-ms="22" started-at="2019-10-14T11:51:09 EDT" finished-at="2019-10-14T11:51:09 EDT">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyZipFieldLabel -->
-        <test-method status="PASS" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="recordFailure" is-config="true" duration-ms="0" started-at="2019-10-14T11:51:09 EDT" finished-at="2019-10-14T11:51:09 EDT">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyZipFieldLabel status=SUCCESS method=FindMyNextElectionPageUI.verifyZipFieldLabel()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- recordFailure -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:uitests.FindMyNextElectionPageUI@1a8a8f7c]" name="tearDown" is-config="true" duration-ms="594" started-at="2019-10-14T11:51:09 EDT" finished-at="2019-10-14T11:51:09 EDT">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:functionaltests.FindMyNextElectionPageEnterAddress@1a8a8f7c]" name="tearDown" is-config="true" duration-ms="589" started-at="2019-10-14T11:59:44 EDT" finished-at="2019-10-14T11:59:45 EDT">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- uitests.FindMyNextElectionPageUI -->
+      </class> <!-- functionaltests.FindMyNextElectionPageEnterAddress -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
